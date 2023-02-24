@@ -28,7 +28,16 @@ public class Board {
 	public void setColumns(int columns) {
 		this.columns = columns;
 	}
-	
 	//A Classe [Board] mão retornará a matriz inteira, só irá retornar uma peça por vez!
-
+	
+	public Piece piece(int row, int column) {
+		return pieces[row][column];
+	}
+	
+	public Piece piece(Position position) {
+		return pieces[position.getRow()][position.getColumn()];
+	}
+	
+	
+	
 }
