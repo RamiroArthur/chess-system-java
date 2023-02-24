@@ -10,11 +10,10 @@ public class Position {
 	}
 
 
-	public Position(int row, int columnInteger) {
+	public Position(int row, int column) {
 		this.row = row;
 		this.column = column;
 	}
-
 
 	public int getRow() {
 		return row;
@@ -25,12 +24,12 @@ public class Position {
 	}
 
 
-	public int getColumnInteger() {
+	public int getColumn() {
 		return column;
 	}
 
 
-	public void setColumnInteger(int columnInteger) {
+	public void setColumn(int columnInteger) {
 		this.column = columnInteger;
 	}
 	
