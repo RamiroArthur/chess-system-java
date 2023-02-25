@@ -38,6 +38,15 @@ public class Board {
 		return pieces[position.getRow()][position.getColumn()];
 	}
 	
+	public void placePiece(Piece piece, Position position) {
+		pieces[position.getRow()][position.getColumn()] = piece;
+		//Pegar a matriz, e na posição dada, atribuir a peça que eu informei.
+		//Agora a peça não estará mais na poição NULL, ela estará nessa posição position
+		piece.position = position; //O atributo é protected é assessivel diretamente por [BOARD]
+	}  
+	
+	
+	
 	
 	
 }
