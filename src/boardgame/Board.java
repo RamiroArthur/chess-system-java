@@ -51,6 +51,21 @@ public class Board {
 		piece.position = position; //O atributo é protected é assessivel diretamente por [BOARD]
 	}  
 	
+	public Piece removePiece(Position position) {
+		if (!positionExists(position)) {
+			throw new BoardException("Position not on the board");
+		}
+		if (piece(position) == null) {
+			return null;
+		}
+		Piece aux = piece(position);
+		aux.position = null;
+		pieces[position.getRow()][position.getColumn()] = null;
+		//Na posição onde eu removo a peça será agora null
+		//Indicando que não hà mais peças nessa posição da matriz!
+		return aux; //Retorna a peça que foi retirada!
+	}
+	
 	private boolean positionExists(int row, int column) {
 		return row >= 0 && row < rows && column >= 0 && column < columns;
 	}
@@ -65,6 +80,8 @@ public class Board {
 		}
 		return piece(position) != null;
 	}
+	
+	
 	
 	
 	
