@@ -16,4 +16,10 @@ public class Rook extends ChessPiece {
 	public String toString() {
 		return "R";
 	}//Fazemos o toString da peça pois ela ira entrar na hora de imprimir o tabuleiro
+	
+	@Override
+	public boolean[][] possibleMoves() {
+		boolean[][] mat = new boolean[getBoard().getRows()][getBoard().getColumns()];
+		return mat;
+	}
 }
