@@ -33,6 +33,12 @@ public class Position {
 		this.column = columnInteger;
 	}
 	
+	public void setValues(int row, int column) {
+		this.row = row;
+		this.column = column;
+	} //Operação para autalizar valores de uma posição
+	
+	
 	@Override
 	public String toString() {
 		return row + ", " + column;
