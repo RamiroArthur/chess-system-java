@@ -37,7 +37,7 @@ public class ChessPosition {
 	//Função Inversa: dada uma posição na matriz eu converto para uma posição de xadrez
 	
 	protected static ChessPosition fromPosition(Position position) {
-		return new ChessPosition((char)('a' - position.getColumn()), 8 - position.getRow());
+		return new ChessPosition((char)('a' + position.getColumn()), 8 - position.getRow());
 	}
 	
 	@Override
