@@ -6,6 +6,6 @@ public class ChessException extends BoardException {
 	private static final long serialVersionUID = 1L;
 	
 	public ChessException(String msg) {
-		super(msg); //Repassa para o construtor da SuperClasse a msg
+		super(msg);
 	}
 }

@@ -90,6 +90,4 @@ public class Pawn extends ChessPiece{
 	public String toString() {
 		return "P";
 	}
-	
-	
 }

@@ -1,10 +1,9 @@
 package boardgame;
 
 public class Board {
-	//Um tabuleiro tem a quantidade de linhas e colunas!
 	private int rows;
 	private int columns;
-	private Piece[][] pieces; //Matriz de peças
+	private Piece[][] pieces;
 	
 	public Board(int rows, int columns) {
 		if (rows < 1 || columns < 1) {
@@ -23,8 +22,6 @@ public class Board {
 	public int getColumns() {
 		return columns;
 	}
-
-	//A Classe [Board] mão retornará a matriz inteira, só irá retornar uma peça por vez!
 	
 	public Piece piece(int row, int column) {
 		if(!positionExists(row, column)) {
@@ -46,9 +43,7 @@ public class Board {
 			throw new BoardException("There is already a piece on position " + position);
 		}
 		pieces[position.getRow()][position.getColumn()] = piece;
-		//Pegar a matriz, e na posição dada, atribuir a peça que eu informei.
-		//Agora a peça não estará mais na poição NULL, ela estará nessa posição position
-		piece.position = position; //O atributo é protected é assessivel diretamente por [BOARD]
+		piece.position = position;
 	}  
 	
 	public Piece removePiece(Position position) {
@@ -61,9 +56,7 @@ public class Board {
 		Piece aux = piece(position);
 		aux.position = null;
 		pieces[position.getRow()][position.getColumn()] = null;
-		//Na posição onde eu removo a peça será agora null
-		//Indicando que não hà mais peças nessa posição da matriz!
-		return aux; //Retorna a peça que foi retirada!
+		return aux; 
 	}
 	
 	private boolean positionExists(int row, int column) {

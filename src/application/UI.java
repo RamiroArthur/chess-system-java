@@ -39,13 +39,11 @@ public class UI {
 		System.out.flush();
 	}
 	
-	public static ChessPosition readChessPosition(Scanner sc) { //Ler posição do usuario
+	public static ChessPosition readChessPosition(Scanner sc) {
 		try {
-			//Vou receber o Scanner intanciado no programa principal, aqui, como argumento
 			String s = sc.nextLine();
 			char column = s.charAt(0);
 			int row = Integer.parseInt(s.substring(1));
-			//Recortar o String a partir da posição 1 e converto o resultado para inteiro. Tenho a linha!
 			return new ChessPosition(column, row);
 		}
 		catch (RuntimeException e) {

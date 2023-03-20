@@ -17,7 +17,6 @@ public abstract class ChessPiece extends Piece{
 	public Color getColor() {
 		return color;
 	}
-	//Apenas o Get (Não quero deixar que a cor de uma peça seja modificada)	
 	
 	public int getMoveCount() {
 		return moveCount;
@@ -38,5 +37,5 @@ public abstract class ChessPiece extends Piece{
 	protected boolean isThereOpponentPiece(Position position) {
 		ChessPiece p = (ChessPiece)getBoard().piece(position);
 		return p != null && p.getColor() != color;
-	}//Protect pois só o mesmo pacote e subclasses podem acessar
+	}
 }

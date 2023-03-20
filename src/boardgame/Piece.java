@@ -7,19 +7,18 @@ public abstract class Piece {
 	  
 	public Piece(Board board) {
 		this.board = board;
-		position = null; //Opcional "pois board ja vem apontando para null afinal não instanciou nada ainda"
+		position = null; //Opcional
 	}
 
-	protected Board getBoard() { //Acesso na mesma camada e em Sub-Classes de [Piece]
+	protected Board getBoard() {
 		return board;
 	}
 	
 	public abstract boolean[][] possibleMoves();
 	
-	public boolean possibleMove(Position position) { //metodo que depende de um metodo abstrato
+	public boolean possibleMove(Position position) {
 		return possibleMoves()[position.getRow()][position.getColumn()];
-	}//Rook metods, metod que faz gancho com a subclasse
-	//Isso só ira fazer sentido quando existir uma Classe concreta que implementar a operação abstrata acima!
+	}
   
 	public boolean isThereAnyPossibleMove() {
 		boolean[][] mat = possibleMoves();
@@ -32,5 +31,4 @@ public abstract class Piece {
 		}
 		return false;
 	}
-	
 }
